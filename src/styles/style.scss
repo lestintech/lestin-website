@@ -1,0 +1,242 @@
+$Font: "Segoe UI", sans-serif;
+$FontMono: "Cascadia Code", monospace;
+
+@mixin mobile() {
+	@media only screen and (max-width: 700px) {
+		@content;
+	}
+}
+
+*,
+*::before,
+*::after {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	min-width: 0;
+	font-family: $Font;
+}
+
+
+::-webkit-scrollbar {
+	$Size: 10px;
+
+	width: $Size;
+	height: $Size;
+
+	@include mobile {
+		$Size: 5px;
+
+		width: $Size;
+		height: $Size;
+	}
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #932d7f;
+	border-radius: 13px;
+	transition: 300ms;
+
+	&:hover {
+		background-color: #932d7f;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+code {
+	display: block;
+	padding: 1.2rem 1.8rem !important;
+	border-radius: 0.5rem;
+	backdrop-filter: blur(10px);
+	background-color: #0d121c9a !important;
+	border: 1px solid #ffffff27;
+	overflow-x: auto;
+	tab-size: 4;
+	-moz-tab-size: 4;
+
+	* {
+		font-family: $FontMono;
+	}
+}
+
+pre {
+	code {
+		font-family: 'Courier New', Consolas, Monaco, monospace;
+		font-size: 1rem;
+		line-height: 1.5;
+		white-space: pre;
+
+		@include mobile {
+			font-size: 0.8rem;
+		}
+	}
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #0d121c;
+}
+
+#app {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.backBox {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	place-content: center;
+	margin-inline: auto;
+
+	img {
+		max-width: 1000px;
+	}
+
+	&::after {
+		display: block;
+		content: "";
+		background-color: #932d7f;
+		filter: blur(120px);
+		width: 30rem;
+		border-radius: 50%;
+		aspect-ratio: 1;
+		place-self: center;
+		position: absolute;
+		opacity: 0.6;
+		animation: backGlow 10s ease-in-out infinite;
+	}
+
+	@keyframes backGlow {
+		0% {
+			width: 30rem;
+		}
+
+		50% {
+			width: 40rem;
+			opacity: 0.6;
+		}
+	}
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	padding: 10rem 1rem;
+	max-width: min(50rem, 100%);
+	justify-self: center;
+	flex-direction: column;
+	z-index: 1;
+	gap: 4rem;
+
+	@include mobile {
+		gap: 2.5rem;
+	}
+}
+
+.introBox {
+	display: flex;
+	gap: 1rem;
+	place-items: center;
+	justify-self: center;
+	align-self: center;
+
+	@include mobile {
+		zoom: .8;
+	}
+}
+
+.introLogo {
+	width: 8rem;
+}
+
+.introTitleBox {
+	display: flex;
+	flex-direction: column;
+	color: white;
+	line-height: 0;
+	gap: 2.5rem;
+
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	p {
+		font-size: 1.2rem;
+		opacity: 0.7;
+	}
+}
+
+.linkButtons {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.linkButton {
+	flex: 0 0 auto;
+	/* Don't grow, don't shrink, auto size */
+	display: flex;
+	color: white;
+	background-color: #0d121c;
+	padding: 0.4rem 1rem;
+	padding-inline-end: 1.3rem;
+	border: 1px solid #ffffff27;
+	border-radius: 0.7rem;
+	align-items: center;
+	gap: 0.8rem;
+	transition: 200ms;
+	min-width: 13rem;
+
+	iconify-icon {
+		font-size: 2.5rem;
+	}
+
+	h5 {
+		font-size: 0.9rem;
+		font-weight: 500;
+		margin-bottom: 0.1rem;
+	}
+
+	p {
+		font-size: 0.7rem;
+		color: #7f7f7f;
+		font-family: $FontMono;
+	}
+
+	&:hover {
+		background-color: rgb(27, 36, 54);
+	}
+}
+
+.npmButton {
+
+	// background-color: #420d0d;
+	iconify-icon {
+		font-size: 2.1rem;
+	}
+}
+
+.githubButton {
+
+	iconify-icon {
+		margin-inline-start: -0.3rem;
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"name": "lestin-website",
+	"version": "1.0.0",
+	"description": "Lestin's home page",
+	"main": "dist/index.html",
+	"scripts": {},
+	"keywords": [],
+	"author": "Shahab Movahhedi",
+	"license": "MIT",
+	"packageManager": "pnpm@10.28.2",
+	"devDependencies": {
+		"lestin": "^0.3.0",
+		"sass": "^1.97.3",
+		"typescript": "^5.9.3",
+		"vite": "^7.3.1"
+	},
+	"dependencies": {
+		"highlight.js": "^11.11.1",
+		"iconify-icon": "^3.0.2"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"module": "node20",
+		"jsx": "react-jsx",
+		"jsxImportSource": "lestin",
+		"esModuleInterop": true,
+		"moduleResolution": "node16",
+	}
+}
