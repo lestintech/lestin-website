@@ -48,6 +48,23 @@ document.body.appendChild( <HelloMessage name="Taylor" /> );`}
 					</div>
 				</a>
 			</div>
+
+			<article>
+				<pre>
+					{`Lestin has one job: Transform JSX codes to pure HTML elements using document.createElement().
+
+Lestin is DOM-based. There's no virtual-DOM, and thus, no additional overhead. We can theoretically say its performance is ~equal to vanilla JS (it's just three functions). (Please contribute on testing Lestin performance).
+
+Lestin adds less than 1KB gzipped to bundles, but reduces the project size much more than this, as it simplifies component and element creations by supporting JSX; Compared to React (~30KB) and Preact (~3KB).
+
+
+You don't need to import Lestin in your scripts for JSX. TypeScript and Vite automatically import them upon build. This is due to setting lestin as the jsxImportSource in tsconfig.json. Although you may import it to use it's type declarations such as Lestin.PropsWithChildren.
+
+Lestin uses Vite as its primarily supported bundler. Vite is extremely fast⚡️, and reliable.
+
+Quick reminder: If you choose not to use JSX in your project, using Lestin does nothing, and you can safely remove it. But I really can't find a reason not to use JSX in new projects.
+`}		</pre>
+		</article>
 		</main>
 	</div>
 );
