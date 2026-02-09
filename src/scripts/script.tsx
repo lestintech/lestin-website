@@ -1,16 +1,18 @@
 import { Iconify } from "./Iconify";
 import { CodeBlock } from "./Code";
+import HexImage from "../images/hex.svg";
+import LestinLogo from "../images/lestin-logo.svg";
 
 const app = (
 	<div id="app">
 		<div class="backBox">
-			<img src="../images/hex.svg" alt="Hex background" />
+			<img src={HexImage} alt="Hex background" />
 		</div>
 
 		<main>
 			<div class="introBox">
 				<div class="introLogoBox">
-					<img class="introLogo" src="../images/lestin-logo.svg" alt="Lestin Logo" />
+					<img class="introLogo" src={LestinLogo} alt="Lestin Logo" />
 				</div>
 
 				<div class="introTitleBox">
